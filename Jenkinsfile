@@ -9,23 +9,18 @@ pipeline {
         }
         stage('Build') {
             steps {
-                script {
-                    docker.build('my-flask-app')
-                }
+                sh 'pip install flask flask-sqlalchemy'
             }
         }
         stage('Test') {
             steps {
-                // Add test commands if any, e.g., python -m pytest
                 echo 'Running tests...'
-                // For now, just echo
+                // Add test commands here if available
             }
         }
         stage('Deploy') {
             steps {
-                script {
-                    docker.run('-d -p 5000:5000 --name flask-app my-flask-app')
-                }
+                sh 'python app.py &'
             }
         }
     }
