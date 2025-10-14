@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'pip install flask flask-sqlalchemy'
+                sh 'pip install --break-system-packages flask flask-sqlalchemy'
             }
         }
         stage('Test') {
