@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Asad-Khurshid1585/Week-8.git'
+                git branch: 'main', url: 'https://github.com/Asad-Khurshid1585/Week-8.git'
             }
         }
         stage('Build') {
