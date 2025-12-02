@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 
-# Modified from Folder2 - Different change on same line
+# Resolved merge conflict - Combined changes from both Folder1 and Folder2
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///firstapp.db'
 db = SQLAlchemy(app)
